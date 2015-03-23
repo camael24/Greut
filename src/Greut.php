@@ -35,6 +35,11 @@ class Greut
         $this->_data  = new \Stdclass();
     }
 
+    public function useHeader($bool = true)
+    {
+        $this->_useHeader = $bool;
+    }
+
     public function setOutputStream(Out $response)
     {
         $this->_out = $response;
