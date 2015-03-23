@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Camael24\\Greut": "src"
+            "Camael24\\Greut\\": "src"
         }
     }
 }
