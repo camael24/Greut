@@ -21,13 +21,16 @@ class Greut
     protected $_blocknames = array();
     protected $_file = '';
     protected $_headers = array();
+    protected $_useHeader = true;
 
-    public function __construct(Out $response = null)
+    public function __construct(Out $response = null, $useHeader = true)
     {
         if ($response === null) {
             $response = new Response();
         }
 
+
+        $this->_useHeader = $useHeader;
         $this->_out   = $response;
         $this->_data  = new \Stdclass();
     }
@@ -123,8 +126,10 @@ class Greut
 
     public function render()
     {
-        while ($h = array_pop($this->_headers)) {
-            $this->_out->sendHeader($h[0], $h[1], $h[2], $h[3]);
+        if($this->_useHeader === true) {
+            while ($h = array_pop($this->_headers)) {
+                $this->_out->sendHeader($h[0], $h[1], $h[2], $h[3]);
+            }
         }
 
         $this->_out->writeAll($this->renderFile($this->_file));
