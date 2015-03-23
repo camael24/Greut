@@ -1,0 +1,21 @@
+{
+    "name"       : "Camael24/Greut",
+    "description": "The Sohoa\\Greut template library in standalone library.",
+    "type"       : "library",
+    "homepage"   : "http://github.com/sohoa/greut",
+    "license"    : "BSD-3-Clause",
+    "authors"    : [
+        {
+            "name"    : "Hoa community",
+            "homepage": "http://hoa-project.net/"
+        }
+    ],
+    "require": {
+        "hoa/http": "~0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Camael24\\Greut": "src"
+        }
+    }
+}
