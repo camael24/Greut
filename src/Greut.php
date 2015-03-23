@@ -30,7 +30,6 @@ class Greut
 
         $this->_out   = $response;
         $this->_data  = new \Stdclass();
-        $this->_paths = TPL_DIR;
     }
 
     public function setOutputStream(Out $response)
