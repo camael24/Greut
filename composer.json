@@ -11,7 +11,7 @@
         }
     ],
     "require": {
-        "hoa/http": "~1.0"
+        "hoa/http": "~0.0"
     },
     "autoload": {
         "psr-4": {
